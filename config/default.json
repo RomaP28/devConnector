@@ -1,6 +1,0 @@
-{
-  "mongoURI":"mongodb+srv://roman:nEe8sZTcKpzQAQgw@cluster0.ewiuxyy.mongodb.net/?retryWrites=true&w=majority",
-  "jwtSecret": "ultrasupersecretpasswoed",
-  "githubClientId": "58162060acef7fd7c847",
-  "githubSecret": "3d01c6f8874b8b2a96d83f16b501966a15a15bad"
-}
