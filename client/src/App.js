@@ -6,8 +6,9 @@ import Landing from "./components/layout/Landing";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Alert from "./components/layout/Alert";
-import Dashboard from "./components/dashboard/dashboard";
+import Dashboard from "./components/dashboard/Dashboard";
 import PrivateRoute from "./components/routing/PrivateRoute";
+
 
 //Redux
 import { Provider } from 'react-redux';
@@ -31,19 +32,18 @@ const App = () => {
     return (
         <Provider store={store}>
             <Router>
-                <Navbar/>
+                <Navbar />
                 <Routes>
-                    <Route exact path="/" element={<Landing/>}/>
+                    <Route path="/" element={<Landing />} />
                 </Routes>
                 <section className="container">
-                    <Alert/>
+                     <Alert />
                     <Routes>
-                        <Route exact path="/login" element={<Login/>}/>
-                        <Route exact path="/register" element={<Register/>}/>
-
-                    </Routes>
-                    <Routes>
-                        <Route exact path="/dashboard/*" element={<PrivateRoute/>}/>
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route element={<PrivateRoute />} >
+                            <Route path="/dashboard" element={<Dashboard  />} exact/>
+                        </Route>
                     </Routes>
                 </section>
             </Router>
