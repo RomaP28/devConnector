@@ -7,6 +7,7 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Alert from "./components/layout/Alert";
 import Dashboard from "./components/dashboard/Dashboard";
+import CreateProfile from "./components/profile-form/CreateProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
 
 
@@ -43,6 +44,9 @@ const App = () => {
                         <Route path="/register" element={<Register />} />
                         <Route element={<PrivateRoute />} >
                             <Route path="/dashboard" element={<Dashboard  />} exact/>
+                        </Route>
+                        <Route element={<PrivateRoute />} >
+                            <Route path="/create-profile" element={<CreateProfile  />} exact/>
                         </Route>
                     </Routes>
                 </section>
