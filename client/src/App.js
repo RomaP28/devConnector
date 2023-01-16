@@ -9,7 +9,7 @@ import Alert from "./components/layout/Alert";
 import Dashboard from "./components/dashboard/Dashboard";
 import CreateProfile from "./components/profile-forms/CreateProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
-
+import EditProfile from "./components/profile-forms/EditProfile";
 
 //Redux
 import { Provider } from 'react-redux';
@@ -18,6 +18,7 @@ import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 
 import './App.css';
+
 
 
 
@@ -47,6 +48,9 @@ const App = () => {
                         </Route>
                         <Route element={<PrivateRoute />} >
                             <Route path="/create-profile" element={<CreateProfile />} exact/>
+                        </Route>
+                        <Route element={<PrivateRoute />} >
+                            <Route path="/edit-profile" element={<EditProfile />} exact/>
                         </Route>
                     </Routes>
                 </section>
