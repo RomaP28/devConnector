@@ -47,7 +47,7 @@ const CreateProfile = ({ createProfile }) => {
     }
 
     return (
-        <Fragment>
+        <section className="container">
             <h1 className="large text-primary">
                 Create Your Profile
             </h1>
@@ -137,7 +137,7 @@ const CreateProfile = ({ createProfile }) => {
                 <input type="submit" value="Send" className="btn btn-primary my-1"/>
                 <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
             </form>
-        </Fragment>
+        </section>
     )
 }
 

@@ -24,7 +24,7 @@ const AddEducation = ({ addEducation }) => {
     const onChange = e => setFormData({...formData, [e.target.name]: e.target.value });
 
     return (
-        <Fragment>
+        <section className="container">
             <h1 className="large text-primary">
                 Add Your Education
             </h1>
@@ -71,7 +71,7 @@ const AddEducation = ({ addEducation }) => {
                 <input type="submit" value='Send' className="btn btn-primary my-1"/>
                 <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
             </form>
-        </Fragment>
+        </section>
     )
 }
 

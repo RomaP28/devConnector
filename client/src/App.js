@@ -38,31 +38,17 @@ const App = () => {
         <Provider store={store}>
             <Router>
                 <Navbar />
+                <Alert />
                 <Routes>
                     <Route path="/" element={<Landing />} />
-                </Routes>
-                <section className="container">
-                     <Alert />
-                    <Routes>
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route element={<PrivateRoute />} >
-                            <Route path="/dashboard" element={<Dashboard />} exact/>
-                        </Route>
-                        <Route element={<PrivateRoute />} >
-                            <Route path="/create-profile" element={<CreateProfile />} exact/>
-                        </Route>
-                        <Route element={<PrivateRoute />} >
-                            <Route path="/edit-profile" element={<EditProfile />} exact/>
-                        </Route>
-                        <Route element={<PrivateRoute />} >
-                            <Route path="/add-experience" element={<AddExperience />} exact/>
-                        </Route>
-                        <Route element={<PrivateRoute />} >
-                            <Route path="/add-education" element={<AddEducation />} exact/>
-                        </Route>
-                    </Routes>
-                </section>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="dashboard" element={<PrivateRoute component={Dashboard} />} />
+                    <Route path="create-profile" element={<PrivateRoute component={CreateProfile} />} />
+                    <Route path="edit-profile" element={<PrivateRoute component={EditProfile} />} />
+                    <Route path="add-experience" element={<PrivateRoute component={AddExperience} />} />
+                    <Route path="add-education" element={<PrivateRoute component={AddEducation} />} />
+                 </Routes>
             </Router>
         </Provider>
     )
