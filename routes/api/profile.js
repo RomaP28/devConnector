@@ -40,7 +40,6 @@ router.post('/', [auth,
             return res.status(400).json({errors: errors.array()});
         }
 
-    console.log(req.body)
         const {
             company, website, location, bio,
             status, githubusername, skills, youtube,
@@ -56,7 +55,7 @@ router.post('/', [auth,
     if (bio) profileFields.bio = bio;
     if (status) profileFields.status = status;
     if (githubusername) profileFields.githubusername = githubusername;
-    if (skills) profileFields.companskillslls;
+    if (skills) profileFields.skills = skills;
 
 
     if(skills) {

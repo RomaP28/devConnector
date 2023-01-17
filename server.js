@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const cors = require('cors');
 
 const app = express();
 
@@ -8,7 +9,13 @@ connectDB();
 
 app.use(express.json({extended: false}));
 
+app.enable('trust proxy');
+
 app.get('/', (req, res) => res.send('API running'));
+
+
+app.use(cors()); // Access-Control-Allow-Origin
+app.options('*', cors());
 
 //define routes
 app.use('/api/users', require('./routes/api/users'));

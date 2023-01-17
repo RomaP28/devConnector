@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
@@ -10,6 +10,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 import CreateProfile from "./components/profile-forms/CreateProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import EditProfile from "./components/profile-forms/EditProfile";
+import AddExperience from "./components/profile-forms/AddExperience";
+import AddEducation from "./components/profile-forms/AddEducation";
 
 //Redux
 import { Provider } from 'react-redux';
@@ -18,6 +20,7 @@ import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 
 import './App.css';
+
 
 
 
@@ -51,6 +54,12 @@ const App = () => {
                         </Route>
                         <Route element={<PrivateRoute />} >
                             <Route path="/edit-profile" element={<EditProfile />} exact/>
+                        </Route>
+                        <Route element={<PrivateRoute />} >
+                            <Route path="/add-experience" element={<AddExperience />} exact/>
+                        </Route>
+                        <Route element={<PrivateRoute />} >
+                            <Route path="/add-education" element={<AddEducation />} exact/>
                         </Route>
                     </Routes>
                 </section>
