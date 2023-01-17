@@ -1,12 +1,12 @@
 node_modules/
 config/default.json
 
-client/node_modules/
-client/.pnp
-client/.pnp.js
+node_modules/
+.pnp
+.pnp.js
 
 # testing
-client/coverage
+/coverage
 
 # production
 client/build
