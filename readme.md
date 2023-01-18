@@ -5,15 +5,15 @@ It is a small social network app that includes authentication, profiles and foru
 Built using modern technologies: MongoDB, Express, React, Node.js, Redux.
 
 
-To run project:
+## To run project:
 
-## Install server dependencies
+### Install server dependencies
 `npm install`
 
-## Install client dependencies
-`cd client`
-`npm install`
+### Install client dependencies
+`cd client
+npm install`
 
-## Run both Express & React from root
-`cd..`
-`npm run dev`
+### Run both Express & React from root
+`cd..
+npm run dev`
