@@ -1,4 +1,3 @@
-/* Global Styles */
 :root {
   --primary-color: #17a2b8;
   --dark-color: #343a40;
@@ -574,4 +573,11 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
+}
+
+.alert-wrapper {
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  display: inline-block;
 }
