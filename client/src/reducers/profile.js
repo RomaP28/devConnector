@@ -31,7 +31,7 @@ export default function(state = initialState, action) {
                 profile: null,
                 repos: [],
                 loading: false
-            }
+            };
         default:
             return state;
 
