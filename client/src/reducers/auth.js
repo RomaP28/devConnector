@@ -5,7 +5,8 @@ import {
     LOGIN_FAIL,
     USER_LOADED,
     AUTH_ERROR,
-    LOGOUT, ACCOUNT_DELETED
+    LOGOUT,
+    ACCOUNT_DELETED
 } from "../actions/types";
 
 const initialState = {
@@ -14,7 +15,7 @@ const initialState = {
     loading: true,
     user: null
 }
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function(state = initialState, action) {
     const { type, payload } = action;
 
