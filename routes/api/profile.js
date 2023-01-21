@@ -109,7 +109,7 @@ router.get('/', async (req, res) => {
 
 //Get profile by user id
 //public access
-router.get('/user/:user_id', async (req, res) => {
+router.get('/:user_id', async (req, res) => {
     try{
         const profile = await Profile.find({user: req.params.user_id}).populate('user', ['name', 'avatar']);
 

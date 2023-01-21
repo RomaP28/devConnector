@@ -43,6 +43,12 @@ img {
   margin-bottom: 3rem;
 }
 
+.spinner {
+  width: 50px;
+  margin: auto;
+  display: block
+}
+
 /* Text Styles*/
 .x-large {
   font-size: 4rem;
