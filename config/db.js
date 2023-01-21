@@ -3,9 +3,13 @@ const config = require('config');
 const db = config.get('mongoURI');
 
 const connectDB = async () => {
+
+  mongoose.set('strictQuery', true);
+
+
   try {
     await mongoose.connect(db, {
-      useNewUrlParser: true
+      useNewUrlParser: true,
     });
     console.log('Database connected!')
   } catch(err) {

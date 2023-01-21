@@ -1,10 +1,8 @@
-import React, { Fragment, useState } from "react";
-import axios from "axios";
-import {BrowserRouter as Router, Link, Navigate} from "react-router-dom";
+import React, { useState } from "react";
+import {Link, Navigate} from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../actions/auth";
 import PropTypes from "prop-types";
-import Navbar from "../layout/Navbar";
 
 
 const Login = ({ login, isAuthenticated }) => {
