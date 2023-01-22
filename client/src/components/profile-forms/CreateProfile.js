@@ -142,10 +142,5 @@ const CreateProfile = ({ createProfile }) => {
 }
 
 CreateProfile.propTypes = {};
-//
-// const mapStateToProps = state => ({
-//     createProfile: PropTypes.func.isRequired,
-// })
-
 
 export default connect(null,{ createProfile })(CreateProfile);
