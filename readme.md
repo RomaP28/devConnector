@@ -1,9 +1,7 @@
 # devConnector App
 
-This is a MERN stack application from the "MERN Stack Front To Back" course on Udemy. 
-It is a small social network app that includes authentication, profiles and forum posts.
+This is a small MERN stack social network app that includes authentication, user profiles, posts, likes and comments.
 Built using modern technologies: MongoDB, Express, React, Node.js, Redux.
-
 
 ## To run project:
 
