@@ -4,7 +4,9 @@ import {
     GET_POST,
     GET_POSTS,
     POST_ERROR,
-    UPDATE_LIKES
+    UPDATE_LIKES,
+    ADD_COMMENT,
+    REMOVE_COMMENT
 } from '../actions/types'
 
 const initialState = {
@@ -52,6 +54,20 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 posts: state.posts.map(post => post._id === payload.id ? { ...post, likes: payload.likes } : post),
+                loading: false
+            }
+        case ADD_COMMENT:
+            return {
+                ...state,
+                post: { ...state.post, comments: payload },
+                loading: false
+            }
+        case REMOVE_COMMENT:
+            return {
+                ...state,
+                post: { ...state.post,
+                    comments: state.post.comments.filter(comment => comment._id !== payload)
+                },
                 loading: false
             }
         default:
