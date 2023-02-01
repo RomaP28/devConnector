@@ -126,8 +126,6 @@ router.get('/:user_id', async (req, res) => {
 
 //Delete profile, user and posts
 //private access
-
-
 router.delete('/', auth, async (req, res) => {
     try{
         //remove users posts
@@ -269,7 +267,6 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
 
 router.get('/github/:username',(req, res)=>{
     try{
-        console.log(config.get('githubClientId'))
         const options = {
             uri: `https://api.github.com/users/${
                 req.params.username
@@ -284,12 +281,13 @@ router.get('/github/:username',(req, res)=>{
 
         request(options, (error, response, body)=>{
             if(error) console.error(error);
+            console.log(body);
             if(response.statusCode !== 200) {
                 return res.status(404).json({msg: 'No Github profile found'});
             }
 
             res.json(JSON.parse(body));
-        })
+        });
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server error')

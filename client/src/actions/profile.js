@@ -5,8 +5,10 @@ import { ACCOUNT_DELETED,
          GET_PROFILE,
          GET_PROFILES,
          GET_REPOS,
+         NO_REPOS,
          PROFILE_ERROR,
          UPDATE_PROFILE } from "./types";
+import {useParams} from "react-router-dom";
 
 //Get current users profile
 export const getCurrentProfile = () => async dispatch => {
@@ -69,24 +71,20 @@ export const getProfileById = userID => async dispatch => {
 }
 
 //Get GitHub Repos
-export const getGithubRepos = username => async dispatch => {
+export const getGithubRepos = (username) => async (dispatch) => {
     try {
         const res = await axios.get(`/api/profile/github/${username}`);
 
         dispatch({
             type: GET_REPOS,
             payload: res.data
-        })
+        });
     } catch (err) {
         dispatch({
-            type: PROFILE_ERROR,
-            payload: {
-                msg: err.response.statusText,
-                status: err.response.status
-            }
-        })
+            type: NO_REPOS
+        });
     }
-}
+};
 
 //Create or update profile
 export const createProfile = (formData, history, edit = false) => async dispatch => {
