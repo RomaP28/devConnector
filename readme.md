@@ -5,15 +5,17 @@ Built using modern technologies: MongoDB, Express, React, Node.js, Redux.
 
 ## To run project:
 
-### 1. Install server dependencies
+### 1. Open root folder and install server dependencies:
 `npm install`
 
-### 2. Install client dependencies
+### 2. Open client folder:
 `cd client`
 
+### 3. Install client dependencies:
 `npm install`
 
-### 3. Run both Express & React from root
+### 4. Come back to the root folder:
 `cd..`
 
+### 5. Run both Express & React:
 `npm run dev`
