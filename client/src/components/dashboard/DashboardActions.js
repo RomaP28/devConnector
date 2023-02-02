@@ -5,11 +5,11 @@ const DashboardActions = () => {
     return (
         <div className="dash-buttons">
             <Link to="/edit-profile" className="btn btn-light">
-                <i className="fas fa-user-circle text-primary"></i> Edit Profile</Link>
+                <img src='./img/user-circle-solid.svg' alt='user circle icon'/> Edit Profile</Link>
             <Link to="/add-experience" className="btn btn-light">
-                <i className="fab fa-black-tie text-primary"></i> Add Experience</Link>
+                <img src='./img/black-tie.svg' alt='black tie icon'/> Add Experience</Link>
             <Link to="/add-education" className="btn btn-light">
-                <i className="fas fa-graduation-cap text-primary"></i> Add Education</Link>
+                <img src='./img/graduation-cap-solid.svg' alt='graduation cap icon'/> Add Education</Link>
         </div>
     )
 }

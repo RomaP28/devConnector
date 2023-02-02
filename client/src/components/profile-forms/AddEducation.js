@@ -29,7 +29,7 @@ const AddEducation = ({ addEducation }) => {
                 Add Your Education
             </h1>
             <p className="lead">
-                <i className="fas fa-code-branch"></i> Add any school or bootcamp that you have attended
+                <img src='./img/code-branch-solid.svg' alt='code branch icon'/> Add any school or bootcamp that you have attended
             </p>
             <small>* = required field</small>
             <form className="form" onSubmit={e => {

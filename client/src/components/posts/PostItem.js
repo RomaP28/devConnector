@@ -7,15 +7,15 @@ import { addLike, removeLike, deletePost } from "../../actions/post";
 
 const PostItem =({
     addLike, removeLike, deletePost, auth, showActions,
-    post: { _id, text, name, avatar, user, likes, comments, date}}) =>
+    post: { _id, text, name, user, likes, comments, date}}) =>
         <div className="post bg-white p-1 my-1">
             <div>
                 <Link to={`/profile/${user}`}>
-                    <img
-                        className="round-img"
-                        src={avatar}
-                        alt=""
-                    />
+                    {/*<img*/}
+                    {/*    className="round-img"*/}
+                    {/*    src={avatar}*/}
+                    {/*    alt=""*/}
+                    {/*/>*/}
                     <h4>{name}</h4>
                 </Link>
             </div>
@@ -25,22 +25,22 @@ const PostItem =({
 
                 {showActions && <>
                     <button onClick={e => addLike(_id)} type="button" className="btn btn-light">
-                        <i className="fas fa-thumbs-up">{' '}</i>
+                        <img src='./img/thumbs-up-solid.svg' alt='user icon'/>{' '}
                         <span>{likes.length > 0 && (
                             <span>{likes.length}</span>
                         )}</span>
                     </button>
                     <button onClick={e => removeLike(_id)} type="button" className="btn btn-light">
-                        <i className="fas fa-thumbs-down"></i>
+                        <img src='./img/thumbs-down-solid.svg' alt='user icon'/>
                     </button>
                     <Link to={`/posts/${_id}`} className="btn btn-primary">
-                        Discussion{' '} {comments.length > 0 && (
+                        Discussion {' '} {comments.length > 0 && (
                         <span className='comment-count'>{comments.length}</span>
                     )}
                     </Link>
                     {!auth.loading && user === auth.user._id &&  (
                         <button onClick={e => deletePost(_id)} type="button" className="btn btn-danger">
-                            <i className="fas fa-times"></i>
+                            <img src='./img/times-solid.svg' alt='delete icon'/>
                         </button>
                     )}
                 </>}

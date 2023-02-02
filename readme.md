@@ -3,11 +3,11 @@
 This is a small MERN stack social network app that includes authentication, user profiles, posts, likes and comments.
 Built using modern technologies: MongoDB, Express, React, Node.js, Redux.
 
-## Project hosted on cyclic domain:
+## The project is hosted on cyclic environment:
 
 https://weary-bull-teddy.cyclic.app/
 
-## To run project in development mode:
+## To run the project locally:
 
 ### 1. Download project, open root folder and install server dependencies:
 `npm install`

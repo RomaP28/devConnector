@@ -29,7 +29,7 @@ const Dashboard = ({ getCurrentProfile,
                 <Education education={profile.education} />
             <div className="my-2">
                 <button className="btn btn-danger" onClick={()=>deleteAccount()}>
-                    <i className="fas fa-user-minus"></i> Delete my Account
+                    <img src='./img/user-minus-solid.svg' alt='user icon'/> Delete my Account
                 </button>
             </div>
             </Fragment>
