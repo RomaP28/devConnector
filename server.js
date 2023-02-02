@@ -39,7 +39,7 @@ app.use('/api/posts', require('./routes/api/posts'));
 
 //serve front in porduction
 if(process.env.NODE_ENV === 'production') {
-    console.log(process.env.NODE_ENV + ' my credentials ' +  process.env.mongoURI)
+
   app.use(express.static(path.join(__dirname,'./client/build')));
 
   app.get('*', (req, res) => {

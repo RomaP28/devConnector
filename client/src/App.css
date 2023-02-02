@@ -44,7 +44,7 @@ img {
 }
 
 .spinner {
-  width: 50px;
+  width: 5rem;
   margin: auto;
   display: block
 }
@@ -65,6 +65,11 @@ img {
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.lead img {
+  width: 1.5rem;
+  vertical-align: middle;
 }
 
 .text-center {
@@ -325,10 +330,24 @@ button {
   color: #fff;
   padding: 0.45rem;
   margin: 0 0.25rem;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar a:hover {
   color: var(--primary-color);
+}
+
+.navbar a:hover svg {
+  fill: var(--primary-color);
+}
+
+.navbar svg{
+  display: inline;
+  width: 2rem;
+  margin-right: 0.3rem;
+  margin-top: -.3rem;
+  fill: #fff
 }
 
 .navbar .welcome span {
@@ -527,9 +546,9 @@ button {
     justify-content: center;
   }
 
-  .navbar h1 {
-    margin-bottom: 1rem;
-  }
+  /*.navbar h1 {*/
+  /*  margin-bottom: 1rem;*/
+  /*}*/
 
   .navbar .welcome {
     display: none;
