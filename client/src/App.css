@@ -69,7 +69,7 @@ img {
 
 .lead img {
   width: 1.5rem;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .text-center {
@@ -341,13 +341,18 @@ button {
 .navbar a:hover svg {
   fill: var(--primary-color);
 }
-
 .navbar svg{
-  display: inline;
+  fill: #fff;
   width: 2rem;
+}
+.navbar h1 svg{
   margin-right: 0.3rem;
   margin-top: -.3rem;
-  fill: #fff
+}
+
+.navbar ul svg{
+  height: 1.4rem;
+  margin-right: .4rem;
 }
 
 .navbar .welcome span {
@@ -531,8 +536,12 @@ button {
     font-size: 2rem;
   }
 
+
   .lead {
     font-size: 1rem;
+  }
+  .lead img {
+    width: 1.1rem;
   }
 
   /* Navbar */

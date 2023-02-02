@@ -73,7 +73,7 @@ const EditProfile = ({ profile: {profile, loading}, createProfile, getCurrentPro
                 Create Your Profile
             </h1>
             <p className="lead">
-                <i className="fas fa-user"></i> Let's get some information to make your
+                <img src='./img/user-solid.svg' alt='user icon'/> Let's get some information to make your
                 profile stand out
             </p>
             <small>* = required field</small>

@@ -1,8 +1,6 @@
 *.env
 .cache/
 
-client/package.json
-client/package-lock.json
 
 node_modules/
 .pnp
