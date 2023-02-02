@@ -1,10 +1,24 @@
 const express = require('express');
-const connectDB = require('./config/db');
 const cors = require('cors');
 const path = require('path');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config({path: './config.env'});
 
 const app = express();
 
+const connectDB = async () => {
+    mongoose.set('strictQuery', true);
+    try {
+        await mongoose.connect(process.env.mongoURI, {
+            useNewUrlParser: true,
+        });
+        console.log('Database connected!')
+    } catch(err) {
+        console.log(err.message);
+        process.exit(1);
+    }
+}
 //Connect Database
 connectDB();
 
@@ -13,7 +27,6 @@ app.use(express.json({extended: false}));
 app.enable('trust proxy');
 
 // app.get('/', (req, res) => res.send('API running'));
-
 
 app.use(cors()); // Access-Control-Allow-Origin
 app.options('*', cors());
