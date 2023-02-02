@@ -8,7 +8,7 @@ import { ACCOUNT_DELETED,
          NO_REPOS,
          PROFILE_ERROR,
          UPDATE_PROFILE } from "./types";
-import {useParams} from "react-router-dom";
+// import {useParams} from "react-router-dom";
 
 //Get current users profile
 export const getCurrentProfile = () => async dispatch => {
@@ -89,6 +89,7 @@ export const getGithubRepos = (username) => async (dispatch) => {
 
 //Create or update profile
 export const createProfile = (formData, history, edit = false) => async dispatch => {
+
     try {
         const config = {
             headers: {
@@ -97,6 +98,7 @@ export const createProfile = (formData, history, edit = false) => async dispatch
         }
 
         const res = await axios.post('/api/profile', formData, config);
+
 
         dispatch({
             type: GET_PROFILE,

@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
@@ -10,7 +10,7 @@ import ProfileExperience from "./ProfileExperience"
 import ProfileEducation from "./ProfileEducation"
 import ProfileGithub from "./ProfileGithub"
 
-const Profile = ({ getProfileById, profile: {profile, loading}, auth}) => {
+const Profile = ({ getProfileById, profile: { profile, loading }, auth}) => {
     const { id } = useParams();
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const Profile = ({ getProfileById, profile: {profile, loading}, auth}) => {
     return (
         <section className="container">
             {profile === null ? <Spinner/> :
-                <Fragment>
+                <>
                     <Link to='/profiles' className='btn btn-light'>
                         Back To Profiles
                     </Link>
@@ -53,7 +53,7 @@ const Profile = ({ getProfileById, profile: {profile, loading}, auth}) => {
                         </div>
                         {profile.githubusername && <ProfileGithub username={profile.githubusername} />}
                     </div>
-                </Fragment>}
+                </>}
         </section>
     )
 }

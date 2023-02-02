@@ -9,6 +9,8 @@ const User = require('../../models/User');
 const Profile = require('../../models/Profile');
 const Post = require('../../models/Post');
 
+//////////////////////////
+
 router.get('/me', auth, async (req,res) => {
     try{
         const profile = await Profile.findOne({ user: req.user.id }).populate('user', ['name','avatar']);
@@ -19,7 +21,7 @@ router.get('/me', auth, async (req,res) => {
             })
         }
 
-        res.json(profile);
+        await res.json(profile);
 
     } catch (err) {
         console.error(err.message);
@@ -281,7 +283,6 @@ router.get('/github/:username',(req, res)=>{
 
         request(options, (error, response, body)=>{
             if(error) console.error(error);
-            // console.log(body);
             if(response.statusCode !== 200) {
                 return res.status(404).json({msg: 'No Github profile found'});
             }
