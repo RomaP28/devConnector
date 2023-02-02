@@ -634,6 +634,10 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
+
+  .alert-wrapper {
+    top: 8rem;
+  }
 }
 
 .alert-wrapper {
@@ -642,3 +646,4 @@ button {
   right: 2rem;
   display: inline-block;
 }
+
