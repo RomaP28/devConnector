@@ -1,7 +1,8 @@
-node_modules/
-
 *.env
 .cache/
+
+client/package.json
+client/package-lock.json
 
 node_modules/
 .pnp
@@ -10,8 +11,6 @@ node_modules/
 # testing
 /coverage
 
-# production
-/build
 
 # misc
 .DS_Store
