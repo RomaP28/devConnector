@@ -68,8 +68,10 @@ img {
 }
 
 .lead img {
-  width: 1.5rem;
-  vertical-align: text-bottom;
+  width: auto;
+  height: 1.2rem;
+  vertical-align: baseline;
+  transform: translateY(2px);
 }
 
 .lead .connect{
@@ -162,7 +164,7 @@ img {
 .btn img {
   width: 1rem;
   height: auto;
-  vertical-align: text-top;
+  /*vertical-align: text-top;*/
 }
 
 .badge {
@@ -188,6 +190,10 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+}
+
+.bg-primary{
+  border-radius: 5px;
 }
 
 .btn-light,
@@ -218,6 +224,9 @@ img {
   height: 0.8rem;
   width: auto;
   vertical-align: baseline;
+}
+
+.btn-danger img.deleteAcc{
   margin-right: 0.3rem;
 }
 
@@ -548,6 +557,14 @@ button {
   margin-bottom: 0.5rem;
 }
 
+
+.alert-wrapper {
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  display: inline-block;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .container {
@@ -567,12 +584,11 @@ button {
     font-size: 2rem;
   }
 
-
   .lead {
     font-size: 1rem;
   }
   .lead img {
-    width: 1.1rem;
+    height: 1rem;
   }
 
   /* Navbar */
@@ -644,14 +660,8 @@ button {
   }
 
   .alert-wrapper {
-    top: 8rem;
+    top: 7rem;
   }
 }
 
-.alert-wrapper {
-  position: fixed;
-  top: 4rem;
-  right: 2rem;
-  display: inline-block;
-}
 

@@ -6,7 +6,7 @@ import { getPosts } from "../../actions/post";
 import PostItem from "./PostItem";
 import PostForm from "./PostForm";
 
-const Posts = ({ getPosts, post: { posts, loading } }) => {
+const Posts = ({ getPosts, post: { posts, loading }, auth: {user} }) => {
 
     useEffect(()=>{
         getPosts();
@@ -15,7 +15,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     return loading ? <Spinner /> : (
         <section className="container">
             <h1 className="large text-primary">Posts</h1>
-            <p className="lead"><img src='/img/user-solid.svg' alt='user icon'/> Welcome to the community!</p>
+            <p className="lead"><img src='/img/user-solid.svg' alt='user icon'/> {user && user.name}, welcome to the community!</p>
             <PostForm />
             <div className="posts">
                 {posts.map(post =>
@@ -29,10 +29,12 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
 Posts.propTypes = {
     getPosts: PropTypes.func.isRequired,
     post: PropTypes.object.isRequired,
+    auth: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = state => ({
-    post: state.post
+    post: state.post,
+    auth: state.auth,
 })
 
 export default connect(mapStateToProps, { getPosts })(Posts)

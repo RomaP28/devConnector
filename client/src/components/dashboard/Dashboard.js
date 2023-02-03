@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from 'react';
+import React, { useEffect } from 'react';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
@@ -23,23 +23,23 @@ const Dashboard = ({ getCurrentProfile,
             <img src='/img/user-solid.svg' alt='user icon'/> Welcome {user && user.name}
         </p>
         {profile !== null ?
-            <Fragment>
+            <>
                 <DashboardActions />
                 <Experience experience={profile.experience} />
                 <Education education={profile.education} />
             <div className="my-2">
                 <button className="btn btn-danger" onClick={()=>deleteAccount()}>
-                    <img src='/img/user-minus-solid.svg' alt='user icon'/> Delete my Account
+                    <img className="deleteAcc" src='/img/user-minus-solid.svg' alt='user icon'/> Delete my Account
                 </button>
             </div>
-            </Fragment>
+            </>
             :
-            <Fragment>
+            <>
                 <p>You have not yet setup a profile, please add some info</p>
                 <Link to="/create-profile" className="btn btn-primary my-1">
                     Create Profile
                 </Link>
-            </Fragment>}
+            </>}
     </section>
 }
 
