@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from "react-moment";
 import { connect } from "react-redux";
-import {deleteEducation} from "../../actions/profile";
+import { deleteEducation } from "../../actions/profile";
 
 
 const Education = ({ education, deleteEducation }) => {
@@ -21,7 +21,7 @@ const Education = ({ education, deleteEducation }) => {
         </tr>
     ));
     return (
-        <Fragment>
+        <>
             <h2 className="my-2">Education Credentials</h2>
             <table className="table">
                 <thead>
@@ -34,7 +34,7 @@ const Education = ({ education, deleteEducation }) => {
                 </thead>
                 <tbody>{educations}</tbody>
             </table>
-        </Fragment>
+        </>
     )
 }
 

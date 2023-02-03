@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Omnes', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -72,12 +72,22 @@ img {
   vertical-align: text-bottom;
 }
 
+.lead .connect{
+  vertical-align: middle;
+  margin-top: -0.3rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .text-primary {
   color: var(--primary-color);
+}
+
+.text-primary img {
+  width: 1.2rem;
+  vertical-align: middle;
 }
 
 .text-dark {
@@ -205,9 +215,10 @@ img {
 }
 
 .btn-danger img{
-  height: 1.1rem;
+  height: 0.8rem;
   width: auto;
-  vertical-align: text-top;
+  vertical-align: baseline;
+  margin-right: 0.3rem;
 }
 
 .btn-success,
@@ -289,26 +300,11 @@ button {
   display: flex;
 }
 
-.form .social-input i {
+.form .social-input img {
   padding: 0.5rem;
-  width: 4rem;
+  width: 3.2rem;
 }
 
-.form .social-input i.fa-twitter {
-  color: #38a1f3;
-}
-.form .social-input i.fa-facebook {
-  color: #3b5998;
-}
-.form .social-input i.fa-instagram {
-  color: #3f729b;
-}
-.form .social-input i.fa-youtube {
-  color: #c4302b;
-}
-.form .social-input i.fa-linkedin {
-  color: #0077b5;
-}
 
 .table th,
 .table td {
@@ -430,8 +426,13 @@ button {
   margin: 0 0.3rem;
 }
 
-.profile-top .icons a:hover {
-  color: var(--dark-color);
+.profile-top .icons svg {
+  fill: #fff;
+  height: 2rem;
+}
+
+.profile-top .icons a:hover svg {
+  fill: var(--dark-color);
 }
 
 .profile-about {
@@ -446,10 +447,17 @@ button {
   text-align: center;
 }
 
+.profile-about .skills img {
+  width: 1.2rem;
+  vertical-align: text-bottom;
+}
+
 .dash-buttons img {
   height: 1rem;
   width: auto;
-  vertical-align: text-top;
+  vertical-align: baseline;
+  margin-right: 0.3rem;
+  transform: translateY(2px);
 }
 
 .profile-exp {

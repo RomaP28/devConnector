@@ -20,7 +20,7 @@ const Dashboard = ({ getCurrentProfile,
     return loading && profile === null ? <Spinner /> : <section className="container">
         <h1 className="large text-primary">Dashboard</h1>
         <p className="lead">
-            <img src='./img/user-solid.svg' alt='user icon'/> Welcome {user && user.name}
+            <img src='/img/user-solid.svg' alt='user icon'/> Welcome {user && user.name}
         </p>
         {profile !== null ?
             <Fragment>
@@ -29,7 +29,7 @@ const Dashboard = ({ getCurrentProfile,
                 <Education education={profile.education} />
             <div className="my-2">
                 <button className="btn btn-danger" onClick={()=>deleteAccount()}>
-                    <img src='./img/user-minus-solid.svg' alt='user icon'/> Delete my Account
+                    <img src='/img/user-minus-solid.svg' alt='user icon'/> Delete my Account
                 </button>
             </div>
             </Fragment>

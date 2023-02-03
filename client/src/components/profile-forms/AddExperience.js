@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
@@ -29,7 +29,7 @@ const AddExperience = ({ addExperience }) => {
                 Add An Experience
             </h1>
             <p className="lead">
-                <img src='./img/code-branch-solid.svg' alt='code branch icon'/> Add any developer/programming
+                <img src='/img/code-branch-solid.svg' alt='code branch icon'/> Add any developer/programming
                 positions that you have had in the past
             </p>
             <small>* = required field</small>

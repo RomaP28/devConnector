@@ -33,7 +33,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     return (
         <section className="container">
             <h1 className="large text-primary">Sign Up</h1>
-            <p className="lead"><img src='./img/user-solid.svg' alt='user icon'/> Create Your Account</p>
+            <p className="lead"><img src='/img/user-solid.svg' alt='user icon'/> Create Your Account</p>
             <form className="form" onSubmit={e => onSubmit(e)}>
                 <div className="form-group">
                     <input

@@ -16,7 +16,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading} }) => {
             <section className="container">
                 <h1 className="large text-primary">Developers</h1>
                 <p className="lead">
-                    <img src='./img/connectdevelop.svg' alt='user icon'/> Browse and connect with developers
+                    <img className="connect" src='./img/connectdevelop.svg' alt='user icon'/> Browse and connect with developers
                 </p>
                 <div className="profiles">
                     {profiles.length > 0 ? profiles.map(profile => (

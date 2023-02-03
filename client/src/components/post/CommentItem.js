@@ -9,7 +9,7 @@ const CommentItem = ({
     postId,
     deleteComment,
     comment: {
-        _id, text, name, avatar, user, date
+        _id, text, name, user, date
     },
     auth
 }) =>
@@ -31,7 +31,7 @@ const CommentItem = ({
             </p>
             {!auth.loading && user === auth.user._id &&
                     <button onClick={e => deleteComment(postId, _id)} type="button" className="btn btn-danger">
-                        <img src='./img/times-solid.svg' alt='delete icon'/>
+                        <img src='/img/times-solid.svg' alt='delete icon'/>
                     </button>
             }
         </div>

@@ -25,13 +25,13 @@ const PostItem =({
 
                 {showActions && <>
                     <button onClick={e => addLike(_id)} type="button" className="btn btn-light">
-                        <img src='./img/thumbs-up-solid.svg' alt='user icon'/>{' '}
+                        <img src='/img/thumbs-up-solid.svg' alt='user icon'/>{' '}
                         <span>{likes.length > 0 && (
                             <span>{likes.length}</span>
                         )}</span>
                     </button>
                     <button onClick={e => removeLike(_id)} type="button" className="btn btn-light">
-                        <img src='./img/thumbs-down-solid.svg' alt='user icon'/>
+                        <img src='/img//thumbs-down-solid.svg' alt='user icon'/>
                     </button>
                     <Link to={`/posts/${_id}`} className="btn btn-primary">
                         Discussion {' '} {comments.length > 0 && (
@@ -40,7 +40,7 @@ const PostItem =({
                     </Link>
                     {!auth.loading && user === auth.user._id &&  (
                         <button onClick={e => deletePost(_id)} type="button" className="btn btn-danger">
-                            <img src='./img/times-solid.svg' alt='delete icon'/>
+                            <img src='/img/times-solid.svg' alt='delete icon'/>
                         </button>
                     )}
                 </>}

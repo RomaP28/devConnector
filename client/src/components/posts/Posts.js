@@ -15,7 +15,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     return loading ? <Spinner /> : (
         <section className="container">
             <h1 className="large text-primary">Posts</h1>
-            <p className="lead"><img src='./img/user-solid.svg' alt='user icon'/> Welcome to the community!</p>
+            <p className="lead"><img src='/img/user-solid.svg' alt='user icon'/> Welcome to the community!</p>
             <PostForm />
             <div className="posts">
                 {posts.map(post =>

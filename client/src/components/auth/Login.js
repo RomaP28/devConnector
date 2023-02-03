@@ -26,7 +26,7 @@ const Login = ({ login, isAuthenticated }) => {
     return (
         <section className="container">
             <h1 className="large text-primary">Sign In</h1>
-            <p className="lead"><img src='./img/user-solid.svg' alt='user icon'/> Sign In Your Account</p>
+            <p className="lead"><img src='/img/user-solid.svg' alt='user icon'/> Sign In Your Account</p>
             <form className="form" onSubmit={e => onSubmit(e)}>
                 <div className="form-group">
                     <input type="email" placeholder="Email Address" name="email" value={email} onChange={e=>onChange(e)} />
