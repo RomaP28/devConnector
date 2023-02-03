@@ -4,7 +4,7 @@
   "description": "Social network",
   "main": "server.js",
   "scripts": {
-    "start": "npm run build:dev --prefix client && node server",
+    "start": "node server",
     "server": "nodemon server",
     "client": "npm run start:dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
