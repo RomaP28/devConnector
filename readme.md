@@ -1,3 +1,5 @@
+![Banner](./img/feadme-banner.jpeg)
+
 # devConnector App
 
 This is a small MERN stack social network app that includes authentication, user profiles, posts, likes and comments.
