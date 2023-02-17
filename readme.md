@@ -1,4 +1,4 @@
-![Banner](./client/public/img/readme-banner.png)
+![Banner](./client/public/img/banner.png)
 
 # devConnector App
 
