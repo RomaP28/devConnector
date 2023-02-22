@@ -13,14 +13,14 @@ https://weary-bull-teddy.cyclic.app/
  
 You should create your own Mongo database.
 
-### 1. Download project open root folder and create config.env with 5 variables:
+### 1. Download project open root folder, create config.env and set 5 variables:
 
-**NODE_ENV** "production" or "development", <br />
-**mongoURI** MongoDB connection, <br />
-**jwtSecret** secret password for generation JWT Token, <br />
-**githubClientId**, **githubSecret** Github connection
+**NODE_ENV** = "production" or "development", <br />
+**mongoURI** = MongoDB connection, <br />
+**jwtSecret** = secret password for generation JWT Token, <br />
+**githubClientId**, **githubSecret** = Github connection
 
-### 2. and install server dependencies:
+### 2. In the root folder install server dependencies:
 `npm install`
 
 ### 3. Open client folder:
