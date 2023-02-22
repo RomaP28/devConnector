@@ -21,7 +21,8 @@ https://weary-bull-teddy.cyclic.app/
 `npm install`
 
 ### 4. Come back to the root folder:
-`cd..`
+
 
 ### 5. Run both Express & React:
+`cd..`
 `npm run dev`
