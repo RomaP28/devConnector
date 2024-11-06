@@ -5,19 +5,29 @@ const ProfileSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
     },
-    company: String,
-    website: String,
-    location: String,
+    company: {
+        type: String
+    },
+    website: {
+        type: String
+    },
+    location: {
+        type: String
+    },
     status: {
-       type: String,
-       required: true
+        type: String,
+        required: true
     },
     skills: {
-       type: [String],
-       required: true
+        type: [String],
+        required: true
     },
-    bio: String,
-    githubusername: String,
+    bio: {
+        type: String
+    },
+    githubusername: {
+        type: String
+    },
     experience: [
         {
             title: {
@@ -28,17 +38,23 @@ const ProfileSchema = new mongoose.Schema({
                 type: String,
                 required: true
             },
-            location: String,
+            location: {
+                type: String
+            },
             from: {
                 type: Date,
                 required: true
             },
-            to: Date,
+            to: {
+                type: Date
+            },
             current: {
                 type: Boolean,
                 default: false
             },
-            description: String
+            description: {
+                type: String
+            }
         }
     ],
     education: [
@@ -59,26 +75,39 @@ const ProfileSchema = new mongoose.Schema({
                 type: Date,
                 required: true
             },
-            to: Date,
+            to: {
+                type: Date
+            },
             current: {
                 type: Boolean,
                 default: false
             },
-            description: String
+            description: {
+                type: String
+            }
         }
     ],
     social: {
-        youtube: String,
-        twitter: String,
-        facebook: String,
-        linkedin: String,
-        instagram: String
+        youtube: {
+            type: String
+        },
+        twitter: {
+            type: String
+        },
+        facebook: {
+            type: String
+        },
+        linkedin: {
+            type: String
+        },
+        instagram: {
+            type: String
+        }
     },
     date: {
         type: Date,
         default: Date.now
     }
-}
-);
+});
 
-module.exports = Profile = mongoose.model('profile', ProfileSchema)
+module.exports = mongoose.model('profile', ProfileSchema);

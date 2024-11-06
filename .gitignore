@@ -1,6 +1,6 @@
 *.env
 .cache/
-
+config/default.json
 
 node_modules/
 .pnp
